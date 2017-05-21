@@ -1,0 +1,53 @@
+<!DOCTYPE html>  
+<html>	
+<head>	
+<title>	
+</title>	
+</head>	
+<body>	
+para 1: v0.2.8 <br>	
+<a href="http://www.beautifullover.org" target="_blank">	
+beautifullover </a>	
+</br>	
+<a href="https://github.com/littleflute/BlCDs/issues/519" target="_blank">	
+issue519 </a>	
+<p id="demo" style="border:1px solid red;"></p>		
+<button onclick="play('01 Owner of a Lonely Heart.mp3')">1:01 Owner of a Lonely Heart.mp3</button> 
+<button onclick="play('02 Hold On.mp3')">2:02 Hold On.mp3</button> 
+<button onclick="play('03 It Can Happen.mp3')">3:03 It Can Happen.mp3</button> 
+<button onclick="play('04 Changes.mp3')">4:04 Changes.mp3</button> 
+<button onclick="play('05 Cinema [Live].mp3')">5:05 Cinema [Live].mp3</button> 
+<button onclick="play('06 Leave It.mp3')">6:06 Leave It.mp3</button> 
+<button onclick="play('07 Our Song.mp3')">7:07 Our Song.mp3</button> 
+<button onclick="play('08 City of Love.mp3')">8:08 City of Love.mp3</button> 
+<button onclick="play('09 Hearts.mp3')">9:09 Hearts.mp3</button> 
+<button onclick="play('10 Leave It [-][Single Remix].mp3')">10:10 Leave It [-][Single Remix].mp3</button> 
+<br> 
+<button onclick="play('11 Make It Easy [-].mp3')">11:11 Make It Easy [-].mp3</button> 
+<button onclick="play('12 It Can Happen [Cinema Version].mp3')">12:12 It Can Happen [Cinema Version].mp3</button> 
+<button onclick="play('13 It's Over [#][-].mp3')">13:13 It's Over [#][-].mp3</button> 
+<button onclick="play('14 Owner of a Lonely Heart [#][-][Extended Version].mp3')">14:14 Owner of a Lonely Heart [#][-][Extended Version].mp3</button> 
+<button onclick="play('15 Leave It [-][A Capella Version].mp3')">15:15 Leave It [-][A Capella Version].mp3</button> 
+<audio id="mp3Player" controls> 	
+	<source src="01 Owner of a Lonely Heart.mp3" type="audio/mpeg">	
+Your browser does not supoort hte audio element	
+</audio>		
+<script>								
+	var xmlhttp = new XMLHttpRequest();				
+	xmlhttp.onreadystatechange = function() {				
+   	if(this.readyState == 4 && this.status == 200) {		
+       		var myObj = JSON.parse(this.responseText); 		
+       		document.getElementById("demo").innerHTML = myObj.songNum;	
+   	}								
+	};		
+	xmlhttp.open("GET", "https://littleflute.github.io/Elton-John/l.json", true);	
+	xmlhttp.send();							
+//--	
+function play(url){		
+	var p = document.getElementById("mp3Player");	
+p.src = url;	
+p.play();	
+}	
+</script>							
+</body>	
+</html>	
