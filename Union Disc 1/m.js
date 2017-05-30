@@ -1,0 +1,9 @@
+var f = [];				
+f[0]	= "v0.0.7";			
+f[1]	= "01 Intro-Firebird Suite.mp3";		
+f[2]	= "02 Yours Is No Disgrace.mp3";		
+f[3]	= "03 Rhythm of Love.mp3";		
+f[4]	= "04 Heart of the Sunrise.mp3";		
+f[5]	= "05 Clap-Mood for a Day.mp3";		
+f[6]	= "06 Make It Easy-Owner of a Lonely Heart.mp3";		
+f[7]	= "07 I've Seen All Good People.mp3";		
